@@ -13,6 +13,15 @@ class Hangman:
         self.list_of_guesses = []
 
     def check_guess(self, guess):
+        """
+        This function checks if the user's guessed letter is in the secret word.
+
+        Returns:
+        - Whether guess is in the word
+        - Whether guess has already been guessed
+        - How many lives the user has left 
+
+        """
         guess.lower()
         if guess in self.word:
             print(f"Good guess! {guess} is in the word.")
@@ -28,6 +37,12 @@ class Hangman:
             print(f"You have {self.num_lives} lives left.")
 
     def ask_for_input(self):
+        """
+        This function asks the user for an input, and checks whether is it valid. To be valid, 
+        the input needs to be one single alphabetic character that has not already been guessed.
+        If the letter has not been guessed, it appends this guess to the list of guessed letters.
+        
+        """
         game_state = True
         while game_state == True:
             guess = input("Please enter your guess: ")
