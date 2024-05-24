@@ -30,7 +30,7 @@ class Hangman:
                     self.word_guessed[i] = str(guess)
                 else:
                     continue  
-            self.num_letters - 1      
+            self.num_letters = self.num_letters - 1      
         else:
             self.num_lives = self.num_lives - 1
             print(f"Sorry, {guess} is not in the word. Try again.")
@@ -57,7 +57,6 @@ class Hangman:
 def play_game(word_list):
     num_lives = 5
     game = Hangman(word_list, num_lives)
-    game.ask_for_input()
     while True:
         if game.num_lives == 0:
             print("You lost!")
@@ -69,6 +68,7 @@ def play_game(word_list):
             break
     
     return "Thanks for playing, the game is over."
+
 play_game(word_list)    
     
     
