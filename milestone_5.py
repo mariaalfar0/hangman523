@@ -41,10 +41,9 @@ class Hangman:
         This function asks the user for an input, and checks whether is it valid. To be valid, 
         the input needs to be one single alphabetic character that has not already been guessed.
         If the letter has not been guessed, it appends this guess to the list of guessed letters.
-        
+
         """
-        game_state = True
-        while game_state == True:
+        while True:
             guess = input("Please enter your guess: ")
             if len(guess) == 1 and guess.isalpha() == False:
                 print("Invalid letter. Please, enter a single alphabetical character.")
@@ -54,5 +53,21 @@ class Hangman:
                 self.check_guess(guess)
                 self.list_of_guesses.append(guess)
 
-test = Hangman(word_list)
-test.ask_for_input()
+def play_game(word_list):
+    num_lives = 5
+    game = Hangman(word_list, num_lives)
+    game.ask_for_input()
+    while True:
+        if game.num_lives == 0:
+            print("You lost!")
+            break
+        elif game.num_letters > 0:
+            game.ask_for_input()
+        else:
+            print("Congratulations. You won the game!")
+            break
+    
+    return "Thanks for playing, the game is over."
+play_game(word_list)    
+    
+    
