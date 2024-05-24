@@ -55,6 +55,11 @@ class Hangman:
                 break
 
 def play_game(word_list):
+    """
+    This function runs the Hangman game. The player starts with 5 lives, and the function
+    takes a word list as an argument.
+    
+    """
     num_lives = 5
     game = Hangman(word_list, num_lives)
     while True:
