@@ -21,7 +21,10 @@ milestone_4.py:
 - Encapsulates functions from milestone_3.py into Hangman class
 - Initialises attributes
 - Checks if guess has already been guessed and appends it if not
-- Docks lives for incorrect guesses 
+- Docks lives for incorrect guesses
+
+milestone_5.py:
+- Defines a function that creates an instance of the Hangman class so user can play the game
 
 
 ### License information:
