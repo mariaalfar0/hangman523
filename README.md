@@ -3,28 +3,30 @@ Hangman is a classic game in which a player thinks of a word and the other playe
 
 This is an implementation of the Hangman game, where the computer thinks of a word and the user tries to guess it. 
 
-In this project so far, I have consolidated my knowledge of: if/while loops, iteration, defining and calling functions.
+In this project so far, I have consolidated my knowledge of: if/while loops, iteration, defining and calling classes and functions.
+
+### Installation:
+
+Clone the directory using:
+
+git clone https://github.com/mariaalfar0/hangman523.git
+
+Navigate to 'milestone_5.py'
 
 ### Usage instructions:
 
+Run 'milestone_5.py' using:
+
+python3 milestone_5.py
+
 ### File structure of the project:
 
-milestone_2.py: 
-- Sets up the word list and word randomisation
-- Checks if guess is a single, alphabetic character
-
-milestone_3.py:
-- Encapsulates code from milestone_2.py
-- Creates functions to check_guess() and ask_for_input()
-
-milestone_4.py:
-- Encapsulates functions from milestone_3.py into Hangman class
-- Initialises attributes
-- Checks if guess has already been guessed and appends it if not
-- Docks lives for incorrect guesses
-
-milestone_5.py:
-- Defines a function that creates an instance of the Hangman class so user can play the game
+hangman523
+ ┣ milestone_2.py
+ ┣ milestone_3.py
+ ┣ milestone_4.py
+ ┣ milestone_5.py
+ ┗ README.md
 
 
 ### License information:
